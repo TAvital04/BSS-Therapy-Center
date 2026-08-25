@@ -20,9 +20,6 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- EmailJS SDK CDN -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -246,6 +243,13 @@
       <div class="form-card-wrapper" id="form-card-wrapper">
         <form class="appointment-form" id="appointment-form" novalidate>
           
+          <!-- Web3Forms / Transactional Mailer Configuration -->
+          <input type="hidden" name="access_key" value="f2404bb2-5fb2-4a19-ab72-e6f977eecc50">
+          <input type="hidden" name="from_name" value="BSS Therapy Center Appointment Request">
+          <input type="hidden" name="subject" value="Client Email from the Website">
+          <!-- Invisible Honeypot Field (Blocks Spambots Automatically) -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none !important;">
+          
           <div class="form-grid">
             <!-- First Name -->
             <div class="form-group">
@@ -278,36 +282,33 @@
             <!-- County -->
             <div class="form-group">
               <label for="county" class="form-label">County *</label>
-              <input type="text" id="county" name="county" class="form-input" required placeholder="Miami-Dade, Broward, etc.">
-              <span class="error-msg" id="error-county">County is required.</span>
+              <select id="county" name="county" class="form-select" required autocomplete="off">
+                <option value="" disabled selected>Choose one</option>
+                <option value="Miami-Dade">Miami-Dade</option>
+                <option value="Broward">Broward</option>
+                <option value="Palm Beach">Palm Beach</option>
+              </select>
+              <span class="error-msg" id="error-county">Please select a county.</span>
             </div>
 
             <!-- Service Selection -->
             <div class="form-group">
               <label for="service_selection" class="form-label">Service Selection *</label>
-              <select id="service_selection" name="service_selection" class="form-select" required>
+              <select id="service_selection" name="service_selection" class="form-select" required autocomplete="off">
                 <option value="" disabled selected>Choose one</option>
                 <option value="Applied Behavior Analysis (ABA)">Applied Behavior Analysis (ABA)</option>
                 <option value="Home Health Aid">Home Health Aid</option>
                 <option value="Physical Therapy">Physical Therapy</option>
                 <option value="Speech Therapy">Speech Therapy</option>
                 <option value="Occupational Therapy">Occupational Therapy</option>
-                <option value="Primary Care / Other">Primary Care / Other</option>
               </select>
               <span class="error-msg" id="error-service">Please select a service.</span>
-            </div>
-
-            <!-- Subject -->
-            <div class="form-group full-width">
-              <label for="subject" class="form-label">Subject *</label>
-              <input type="text" id="subject" name="subject" class="form-input" required placeholder="Appointment Request / Inquiry">
-              <span class="error-msg" id="error-subject">Subject is required.</span>
             </div>
 
             <!-- More Details -->
             <div class="form-group full-width">
               <label for="more_details" class="form-label">More</label>
-              <textarea id="more_details" name="more_details" class="form-textarea" rows="4" placeholder="Please provide any additional details..."></textarea>
+              <textarea id="more_details" name="more_details" class="form-textarea" rows="4" autocomplete="off" placeholder="Please provide any additional details..."></textarea>
             </div>
           </div>
 
@@ -325,6 +326,13 @@
                 </svg>
               </span>
             </button>
+          </div>
+
+          <!-- HIPAA Privacy Disclaimer -->
+          <div class="hipaa-disclaimer">
+            <p class="hipaa-text">
+              <strong>Privacy Notice:</strong> This form is intended for general appointment inquiries and client intake requests. Please do not submit confidential medical records or protected health information (PHI) through this web form.
+            </p>
           </div>
 
         </form>
@@ -351,6 +359,6 @@
   </footer>
 
   <!-- Script -->
-  <script src="script.js"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

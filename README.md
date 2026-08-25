@@ -1,6 +1,6 @@
 # BSS Therapy Center Website
 
-Production-ready, modern static website built for **BSS Therapy Center** (Better Support and Service) and configured for deployment on **GitHub Pages** with custom domain support and client-side EmailJS integration.
+Production-ready, modern static website built for **BSS Therapy Center** (Better Support and Service) and configured for deployment on **GitHub Pages** with custom domain support and Web3Forms contact form integration.
 
 ---
 
@@ -10,7 +10,7 @@ Production-ready, modern static website built for **BSS Therapy Center** (Better
 Orly/
 ├── index.html                 # Core HTML5 semantic page structure
 ├── styles.css                 # Custom CSS stylesheet with design tokens
-├── script.js                  # Client-side form handling & EmailJS integration
+├── script.js                  # Client-side form validation & Web3Forms integration
 ├── CNAME                      # Custom domain configuration (example.com)
 ├── .nojekyll                  # Bypass Jekyll processing on GitHub Pages
 ├── README.md                  # Setup & deployment documentation
@@ -24,6 +24,26 @@ Orly/
     ├── site_manifest.json     # Master JSON content & asset schema
     └── site_spec.md           # Full site specification document
 ```
+
+---
+
+## 📧 Email Setup (Web3Forms - Zero OAuth Required)
+
+Contact form submissions are handled by **Web3Forms**, delivering messages directly to your inbox with automatic **`Reply-To`** routing. When you click **Reply** in Outlook or Gmail, your response goes directly to the patient's email.
+
+### Setup Steps (Takes 1 Minute):
+
+1. Visit [web3forms.com](https://web3forms.com) and type your receiving email address to get a free **Access Key**.
+2. Open [`script.js`](file:///c:/Users/talav/Documents/Github/Orly/script.js) and paste your key into `WEB3FORMS_ACCESS_KEY`:
+   ```javascript
+   const WEB3FORMS_ACCESS_KEY = "your-actual-access-key-here";
+   ```
+3. (Optional) You can also paste it into the hidden input in `index.html`:
+   ```html
+   <input type="hidden" name="access_key" value="your-actual-access-key-here">
+   ```
+
+That's it! No passwords, OAuth linking, or server backends required.
 
 ---
 
@@ -43,16 +63,6 @@ Orly/
        - `185.199.110.153`
        - `185.199.111.153`
      - **CNAME Record** pointing `www` to your GitHub username target (e.g., `<username>.github.io`).
-
----
-
-## 📧 EmailJS Client Integration
-
-The appointment form uses client-side EmailJS to route submissions through Microsoft 365 / Outlook:
-
-1. Sign up at [EmailJS](https://www.emailjs.com/).
-2. Add **Outlook / Microsoft 365** as your Email Service.
-3. Update `PUBLIC_KEY`, `SERVICE_ID`, and `TEMPLATE_ID` in `script.js`.
 
 ---
 

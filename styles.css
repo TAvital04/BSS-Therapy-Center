@@ -477,21 +477,23 @@ body {
 }
 
 .form-input.invalid, .form-select.invalid, .form-textarea.invalid {
-  border-color: #D32F2F;
+  border: 2.5px solid #D32F2F !important;
+  background-color: #FFEBEE !important;
+  box-shadow: 0 0 0 3.5px rgba(211, 47, 47, 0.25) !important;
 }
 
 .error-msg {
   display: none;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: #D32F2F;
-  margin-top: 4px;
-  font-weight: 600;
+  margin-top: 5px;
+  font-weight: 700;
 }
 
 .form-input.invalid ~ .error-msg,
 .form-select.invalid ~ .error-msg,
 .form-textarea.invalid ~ .error-msg {
-  display: block;
+  display: block !important;
 }
 
 .form-submit-wrapper {
@@ -560,6 +562,24 @@ body {
   background-color: #FFEBEE;
   color: #C62828;
   border: 2px solid #EF5350;
+}
+
+/* HIPAA Privacy Disclaimer */
+.hipaa-disclaimer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.hipaa-text {
+  font-size: 0.78rem;
+  color: #455A64;
+  line-height: 1.45;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.hipaa-text strong {
+  color: var(--primary-dark);
 }
 
 /* EMERGENCY BANNER */

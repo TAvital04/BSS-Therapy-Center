@@ -10,9 +10,9 @@
 
 ```text
 Orly/
-├── index.html                 # Core semantic HTML5 page markup
+├── index.html                 # Core semantic HTML5 page markup with Honeypot Anti-Spam
 ├── styles.css                 # Modular CSS stylesheet (Design Tokens, Cards, Form)
-├── script.js                  # Client-side EmailJS integration & form handling
+├── script.js                  # Form validation & Web3Forms integration
 ├── CNAME                      # GitHub Pages custom domain configuration
 ├── .nojekyll                  # Jekyll build bypass file for GitHub Pages
 ├── README.md                  # Developer documentation & deployment guide
@@ -26,6 +26,17 @@ Orly/
     ├── site_manifest.json     # Single authoritative JSON asset & content schema
     └── site_spec.md           # Master site content specification
 ```
+
+---
+
+## 🛡️ Anti-Spam Implementation
+
+1. **Invisible Honeypot (`name="botcheck"`):**
+   - Configured in `index.html` and verified in `script.js`.
+   - Invisible to human patients (`display: none !important;`).
+   - Automatically tricks and drops automated spambots.
+2. **Web3Forms Server-Side Spam Filter:**
+   - Web3Forms API validates incoming payloads and filters out spam keywords.
 
 ---
 
