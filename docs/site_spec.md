@@ -10,9 +10,10 @@
 
 ```text
 Orly/
-├── index.html                 # Core semantic HTML5 page markup with Honeypot Anti-Spam
-├── styles.css                 # Modular CSS stylesheet (Design Tokens, Cards, Form)
-├── script.js                  # Form validation & Web3Forms integration
+├── index.html                 # Core homepage HTML5 markup with appointment form
+├── careers.html               # Dedicated Careers & Employment application page (PDF resume upload)
+├── styles.css                 # Modular CSS stylesheet (Design Tokens, Cards, Forms, File Uploads)
+├── script.js                  # Multi-page form validation, PDF check & Web3Forms integration
 ├── CNAME                      # GitHub Pages custom domain configuration
 ├── .nojekyll                  # Jekyll build bypass file for GitHub Pages
 ├── README.md                  # Developer documentation & deployment guide
@@ -29,35 +30,19 @@ Orly/
 
 ---
 
-## 🛡️ Anti-Spam Implementation
+## 📄 Pages Overview
 
-1. **Invisible Honeypot (`name="botcheck"`):**
-   - Configured in `index.html` and verified in `script.js`.
-   - Invisible to human patients (`display: none !important;`).
-   - Automatically tricks and drops automated spambots.
-2. **Web3Forms Server-Side Spam Filter:**
-   - Web3Forms API validates incoming payloads and filters out spam keywords.
+1. **Homepage ([`index.html`](file:///c:/Users/talav/Documents/Github/Orly/index.html)):**
+   - Main clinic overview, 5 square service cards, location cards, insurance logos, appointment form, emergency banner, and footer.
+2. **Careers Application ([`careers.html`](file:///c:/Users/talav/Documents/Github/Orly/careers.html)):**
+   - Dedicated application form featuring all standard fields plus a PDF resume file upload (`max 5MB`).
+   - Dispatches PDF attachments directly to your inbox via Web3Forms.
 
 ---
 
-## 🎨 Asset Summary
+## 🛡️ Anti-Spam Implementation
 
-### 1. Logo & Hero
-- **Logo:** `assets/images/logo/bss_therapy_center_logo.png` (897×646 px PNG)
-- **Hero Photo:** `assets/images/hero/hero_community_booth.jpg` (964×777 px JPEG)
-
-### 2. Services Section (5 Photos)
-- **ABA Therapy:** `assets/images/services/applied_behavior_analysis.jpg` (1024×1024 px)
-- **Home Health Aid:** `assets/images/services/home_health_aid.jpg` (1200×896 px)
-- **Physical Therapy:** `assets/images/services/physical_therapy.jpg` (1024×1024 px)
-- **Speech Therapy:** `assets/images/services/speech_therapy.jpg` (1200×896 px)
-- **Occupational Therapy:** `assets/images/services/occupational_therapy.jpg` (1024×1024 px)
-
-### 3. Insurances Accepted (7 Logos)
-- **Children's Medical Services:** `assets/images/insurances/childrens_medical_services.jpg` (495×495 px)
-- **Molina:** `assets/images/insurances/molina.jpg` (360×360 px)
-- **Cigna:** `assets/images/insurances/cigna.jpg` (272×257 px)
-- **Aetna:** `assets/images/insurances/aetna.jpg` (268×268 px)
-- **Carelon:** `assets/images/insurances/carelon.jpg` (200×200 px)
-- **Humana:** `assets/images/insurances/humana.jpg` (400×400 px)
-- **Community Care Plan:** `assets/images/insurances/community_care_plan.jpg` (225×225 px)
+1. **Invisible Honeypot (`name="botcheck"`):**
+   - Configured in `index.html` and `careers.html`, verified in `script.js`.
+   - Invisible to human applicants (`display: none !important;`).
+   - Automatically drops automated spambots.

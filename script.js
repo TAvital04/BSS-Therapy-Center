@@ -1,21 +1,23 @@
 /**
  * BSS Therapy Center - Client-Side Interactive Logic & Web3Forms Integration
  * ===========================================================================
- * Web3Forms handles contact submissions directly to your inbox with zero OAuth.
- * Automatically sets Reply-To header so hitting 'Reply' in your inbox responds to the patient.
+ * Handles Form Validation & Submission for Appointment Requests and Careers Applications.
+ * Displays precise Web3Forms response status & messages.
  */
 
 // Web3Forms Access Key
 const WEB3FORMS_ACCESS_KEY = "f2404bb2-5fb2-4a19-ab72-e6f977eecc50";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("appointment-form");
+  const form = document.getElementById("appointment-form") || document.getElementById("careers-form");
   const submitBtn = document.getElementById("submit-btn");
   const btnText = document.getElementById("btn-text");
   const btnSpinner = document.getElementById("btn-spinner");
   const alertContainer = document.getElementById("form-alert-container");
 
   if (!form) return;
+
+  const isCareersForm = form.id === "careers-form";
 
   // Form Submission Event Listener
   form.addEventListener("submit", async (e) => {
@@ -33,14 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const isValid = validateForm();
+    const isValid = validateForm(isCareersForm);
     if (!isValid) {
       showAlert("Please correct the highlighted fields before submitting.", "error");
       return;
     }
 
     // 2. Set UI Loading State
-    setLoadingState(true);
+    setLoadingState(true, isCareersForm);
 
     try {
       // 3. Live Web3Forms Dispatch
@@ -52,24 +54,39 @@ document.addEventListener("DOMContentLoaded", () => {
         body: formData
       });
 
-      const result = await response.json();
+      let result;
+      const contentType = response.headers.get("content-type");
 
-      if (result.success) {
-        showAlert("Thank you! Your appointment request has been submitted successfully.", "success");
+      if (contentType && contentType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        const responseText = await response.text();
+        if (responseText.includes("Pro feature") || responseText.includes("upgrade")) {
+          result = { success: false, message: "File uploads require a Web3Forms Pro subscription. Please provide a Google Drive / LinkedIn resume link instead." };
+        } else {
+          result = { success: false, message: `Submission error (Status ${response.status}).` };
+        }
+      }
+
+      if (response.ok && result.success) {
+        const successMsg = isCareersForm
+          ? "Thank you for applying! Your application has been submitted successfully."
+          : "Thank you! Your appointment request has been submitted successfully.";
+        showAlert(successMsg, "success");
         form.reset();
       } else {
-        throw new Error(result.message || "Web3Forms submission error");
+        showAlert(result.message || "Web3Forms submission error. Please try again.", "error");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      showAlert("Failed to send message due to a network error. Please try again later.", "error");
+      showAlert("Failed to send submission due to a network connection error. Please try again later.", "error");
     } finally {
-      setLoadingState(false);
+      setLoadingState(false, isCareersForm);
     }
   });
 
   // Client-Side Input Validation
-  function validateForm() {
+  function validateForm(checkResume) {
     let valid = true;
 
     const firstName = document.getElementById("first_name");
@@ -78,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = document.getElementById("phone");
     const county = document.getElementById("county");
     const service = document.getElementById("service_selection");
+    const resumeInput = document.getElementById("resume");
+    const resumeLink = document.getElementById("resume_link");
 
     function checkRequired(input) {
       if (!input || !input.value.trim()) {
@@ -105,14 +124,41 @@ document.addEventListener("DOMContentLoaded", () => {
       valid = false;
     }
 
+    // PDF Resume Check (if file input exists)
+    if (checkResume && resumeInput) {
+      const file = resumeInput.files[0];
+      const maxBytes = 5 * 1024 * 1024; // 5MB limit
+
+      if (!file) {
+        markInvalid(resumeInput);
+        valid = false;
+      } else {
+        const isPdf = file.name.toLowerCase().endsWith(".pdf") || file.type === "application/pdf";
+        const isValidSize = file.size <= maxBytes;
+
+        if (!isPdf || !isValidSize) {
+          markInvalid(resumeInput);
+          valid = false;
+        }
+      }
+    }
+
+    // Resume Link Check (if link input exists on Careers form)
+    if (checkResume && resumeLink) {
+      const val = resumeLink.value.trim();
+      if (!val || val.length < 5) {
+        markInvalid(resumeLink);
+        valid = false;
+      }
+    }
+
     return valid;
   }
 
   function markInvalid(element) {
     if (element) {
       element.classList.add("invalid");
-      // Add real-time event listener to clear invalid state on edit
-      const eventType = element.tagName === "SELECT" ? "change" : "input";
+      const eventType = element.tagName === "SELECT" || element.type === "file" ? "change" : "input";
       element.addEventListener(eventType, function handleInput() {
         element.classList.remove("invalid");
         element.removeEventListener(eventType, handleInput);
@@ -125,14 +171,14 @@ document.addEventListener("DOMContentLoaded", () => {
     invalidElements.forEach((el) => el.classList.remove("invalid"));
   }
 
-  function setLoadingState(isLoading) {
+  function setLoadingState(isLoading, isCareers) {
     if (isLoading) {
       submitBtn.disabled = true;
-      btnText.textContent = "Sending Message...";
+      btnText.textContent = isCareers ? "Submitting Application..." : "Sending Message...";
       btnSpinner.style.display = "inline-block";
     } else {
       submitBtn.disabled = false;
-      btnText.textContent = "Send Message";
+      btnText.textContent = isCareers ? "Submit Application" : "Send Message";
       btnSpinner.style.display = "none";
     }
   }

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers & Employment | BSS Therapy Center</title>
+  <meta name="description" content="Join the team at BSS Therapy Center. Apply today for therapy careers in ABA, Occupational, Physical, Speech Therapy, and Home Health Aid.">
+  <meta name="keywords" content="BSS Therapy Center Careers, Therapy Jobs Miami, ABA Jobs, Pediatric Therapy Employment">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Careers & Employment | BSS Therapy Center">
+  <meta property="og:description" content="Apply for therapy careers at BSS Therapy Center. Upload your PDF resume today.">
+  <meta property="og:image" content="assets/images/hero/hero_community_booth.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo-link">
+        <img src="assets/images/logo/bss_therapy_center_logo.png?v=6" alt="BSS Therapy Center Heart Logo" class="logo-img" id="logo-img">
+        <span class="brand-name" id="brand-name">BSS Therapy Center</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-btn btn-cyan" id="nav-home-btn">Back to Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- CAREERS APPLICATION FORM SECTION -->
+    <section class="section-container" id="careers-application">
+      <div class="section-banner" id="careers-banner">
+        <h2 class="section-banner-title">Careers Application</h2>
+      </div>
+
+      <div class="form-card-wrapper" id="form-card-wrapper">
+        <form class="appointment-form" id="careers-form" enctype="multipart/form-data" novalidate>
+          
+          <!-- Web3Forms / Transactional Mailer Configuration -->
+          <input type="hidden" name="access_key" value="f2404bb2-5fb2-4a19-ab72-e6f977eecc50">
+          <input type="hidden" name="from_name" value="BSS Therapy Center Careers Application">
+          <input type="hidden" name="subject" value="New Employment Application - BSS Therapy Center">
+          
+          <!-- Invisible Honeypot Field (Blocks Spambots Automatically) -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none !important;">
+          
+          <div class="form-grid">
+            <!-- First Name -->
+            <div class="form-group">
+              <label for="first_name" class="form-label">First Name *</label>
+              <input type="text" id="first_name" name="first_name" class="form-input" required autocomplete="given-name">
+              <span class="error-msg" id="error-first-name">First name is required.</span>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group">
+              <label for="last_name" class="form-label">Last Name *</label>
+              <input type="text" id="last_name" name="last_name" class="form-input" required autocomplete="family-name">
+              <span class="error-msg" id="error-last-name">Last name is required.</span>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+              <span class="error-msg" id="error-email">Valid email address is required.</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" required autocomplete="tel">
+              <span class="error-msg" id="error-phone">Valid phone number is required.</span>
+            </div>
+
+            <!-- County -->
+            <div class="form-group">
+              <label for="county" class="form-label">County *</label>
+              <select id="county" name="county" class="form-select" required autocomplete="off">
+                <option value="" disabled selected>Choose one</option>
+                <option value="Miami-Dade">Miami-Dade</option>
+                <option value="Broward">Broward</option>
+                <option value="Palm Beach">Palm Beach</option>
+              </select>
+              <span class="error-msg" id="error-county">Please select a county.</span>
+            </div>
+
+            <!-- Specialty / Service Selection -->
+            <div class="form-group">
+              <label for="service_selection" class="form-label">Specialty / Service *</label>
+              <select id="service_selection" name="service_selection" class="form-select" required autocomplete="off">
+                <option value="" disabled selected>Choose one</option>
+                <option value="Applied Behavior Analysis (ABA)">Applied Behavior Analysis (ABA)</option>
+                <option value="Home Health Aid">Home Health Aid</option>
+                <option value="Physical Therapy">Physical Therapy</option>
+                <option value="Speech Therapy">Speech Therapy</option>
+                <option value="Occupational Therapy">Occupational Therapy</option>
+              </select>
+              <span class="error-msg" id="error-service">Please select a specialty.</span>
+            </div>
+
+            <!-- Resume Link Input -->
+            <div class="form-group full-width">
+              <label for="resume_link" class="form-label">Resume Link (Google Drive, LinkedIn, or Dropbox) *</label>
+              <input type="url" id="resume_link" name="resume_link" class="form-input" required autocomplete="off" placeholder="https://drive.google.com/... or LinkedIn profile URL">
+              <span class="help-text">Share a viewable link to your resume (Google Drive, LinkedIn, Dropbox, etc.). Make sure permissions are set to "Anyone with the link can view".</span>
+              <span class="error-msg" id="error-resume-link">Please provide a valid resume link URL.</span>
+            </div>
+
+            <!-- More Details -->
+            <div class="form-group full-width">
+              <label for="more_details" class="form-label">More</label>
+              <textarea id="more_details" name="more_details" class="form-textarea" rows="4" autocomplete="off" placeholder="Please provide any additional details about your background or qualifications..."></textarea>
+            </div>
+          </div>
+
+          <!-- Alert Feedback Container -->
+          <div class="form-alert-container" id="form-alert-container" style="display: none;"></div>
+
+          <!-- Submit Button -->
+          <div class="form-submit-wrapper">
+            <button type="submit" class="submit-btn" id="submit-btn">
+              <span class="btn-text" id="btn-text">Submit Application</span>
+              <span class="btn-spinner" id="btn-spinner" style="display: none;">
+                <svg class="spinner-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <!-- Applicant Privacy Disclaimer -->
+          <div class="hipaa-disclaimer">
+            <p class="hipaa-text">
+              <strong>Applicant Privacy Notice:</strong> Information provided will be used exclusively for employment evaluation by BSS Therapy Center.
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      <p class="footer-tagline">Providing modern, compassionate care with an emphasis on accessibility and patient comfort.</p>
+      <div class="footer-bottom">
+        <p class="copyright-text">© Better Support and Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js?v=6"></script>
+</body>
+</html>
