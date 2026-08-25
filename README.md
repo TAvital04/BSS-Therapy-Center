@@ -40,7 +40,7 @@ Contact form submissions are handled by **Web3Forms**, delivering messages direc
    ```
 3. (Optional) You can also paste it into the hidden input in `index.html`:
    ```html
-   <input type="hidden" name="access_key" value="your-actual-access-key-here">
+   <input type="hidden" name="access_key" value="your-actual-access-key-here" />
    ```
 
 That's it! No passwords, OAuth linking, or server backends required.

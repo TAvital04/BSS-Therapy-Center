@@ -1,0 +1,212 @@
+/* ==========================================================================
+   CARDS & GRIDS (Services, Locations, Insurances)
+   ========================================================================== */
+
+.section-container {
+  margin-bottom: 24px;
+  scroll-margin-top: 90px;
+}
+
+.section-banner {
+  background-color: var(--banner-bg);
+  border: 3px solid var(--banner-border);
+  border-radius: var(--radius-banner);
+  padding: 16px 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-banner-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--banner-text);
+  letter-spacing: -0.01em;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Services Grid (3 Columns Desktop) */
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card {
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: var(--transition-fast);
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Themes */
+.card-yellow {
+  border: 3px solid var(--card-yellow-border);
+  background-color: var(--card-yellow-bg);
+}
+
+.card-pink {
+  border: 3px solid var(--card-pink-border);
+  background-color: var(--card-pink-bg);
+}
+
+.card-cyan {
+  border: 3px solid var(--card-cyan-border);
+  background-color: var(--card-cyan-bg);
+}
+
+.card-img-holder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-img);
+  overflow: hidden;
+  margin-bottom: 14px;
+  background-color: #ffffff;
+  border: 2px solid rgba(15, 23, 42, 0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.card-description {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Locations Grid */
+.locations-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.location-card {
+  border-radius: 20px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.location-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.coming-soon {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Insurances Grid */
+.insurances-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.insurance-card {
+  border-radius: 18px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: var(--transition-fast);
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.insurance-card.card-yellow {
+  border: 3px solid var(--card-yellow-border);
+  background-color: var(--card-yellow-bg);
+}
+
+.insurance-card.card-pink {
+  border: 3px solid var(--card-pink-border);
+  background-color: var(--card-pink-bg);
+}
+
+.insurance-card.card-cyan {
+  border: 3px solid var(--card-cyan-border);
+  background-color: var(--card-cyan-bg);
+}
+
+.insurance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.insurance-icon-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.insurance-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.insurance-name {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1.25;
+}

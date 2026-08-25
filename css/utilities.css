@@ -1,0 +1,277 @@
+/* ==========================================================================
+   UTILITY CLASSES & DARK MODE OVERRIDES
+   ========================================================================== */
+
+/* Layout & Display Utilities */
+.u-flex-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"],
+[data-theme="dark"] body,
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .site-header,
+body.dark-mode .site-header {
+  background-color: #1e293b !important;
+  border-bottom-color: rgba(51, 65, 85, 0.8) !important;
+}
+
+[data-theme="dark"] .brand-name,
+body.dark-mode .brand-name,
+[data-theme="dark"] .hero-title,
+body.dark-mode .hero-title,
+[data-theme="dark"] .section-banner-title,
+body.dark-mode .section-banner-title,
+[data-theme="dark"] .card-title,
+body.dark-mode .card-title,
+[data-theme="dark"] .location-title,
+body.dark-mode .location-title,
+[data-theme="dark"] .insurance-name,
+body.dark-mode .insurance-name,
+[data-theme="dark"] .form-label,
+body.dark-mode .form-label {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .section-banner,
+body.dark-mode .section-banner {
+  background-color: #1e3a8a !important;
+  border-color: #60a5fa !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .hero-card,
+body.dark-mode .hero-card {
+  background-color: #0c3854 !important;
+  border: 3.5px solid #38bdf8 !important;
+}
+
+[data-theme="dark"] .hero-description,
+body.dark-mode .hero-description,
+[data-theme="dark"] .card-description,
+body.dark-mode .card-description,
+[data-theme="dark"] .coming-soon,
+body.dark-mode .coming-soon,
+[data-theme="dark"] .footer-tagline,
+body.dark-mode .footer-tagline,
+[data-theme="dark"] .copyright-text,
+body.dark-mode .copyright-text,
+[data-theme="dark"] .help-text,
+body.dark-mode .help-text,
+[data-theme="dark"] .hipaa-text,
+body.dark-mode .hipaa-text {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .hero-image-frame,
+body.dark-mode .hero-image-frame,
+[data-theme="dark"] .card-img-holder,
+body.dark-mode .card-img-holder,
+[data-theme="dark"] .insurance-icon-box,
+body.dark-mode .insurance-icon-box {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .card-yellow,
+body.dark-mode .card-yellow {
+  background-color: #362104 !important;
+  border-color: #f59e0b !important;
+}
+
+[data-theme="dark"] .card-pink,
+body.dark-mode .card-pink {
+  background-color: #3e101d !important;
+  border-color: #f43f5e !important;
+}
+
+[data-theme="dark"] .card-cyan,
+body.dark-mode .card-cyan {
+  background-color: #0c3854 !important;
+  border-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .form-card-wrapper,
+body.dark-mode .form-card-wrapper {
+  background-color: #0c3854 !important;
+  border-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea,
+body.dark-mode .form-input,
+body.dark-mode .form-select,
+body.dark-mode .form-textarea {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .btn-cyan,
+body.dark-mode .btn-cyan {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+}
+
+[data-theme="dark"] .btn-cyan:hover,
+body.dark-mode .btn-cyan:hover {
+  background: #1d4ed8 !important;
+}
+
+[data-theme="dark"] .submit-btn,
+body.dark-mode .submit-btn {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .submit-btn:hover:not(:disabled),
+body.dark-mode .submit-btn:hover:not(:disabled) {
+  background-color: #1d4ed8 !important;
+}
+
+[data-theme="dark"] .emergency-banner,
+body.dark-mode .emergency-banner {
+  background-color: #2a121a !important;
+  border-color: #be123c !important;
+}
+
+[data-theme="dark"] .emergency-text,
+body.dark-mode .emergency-text {
+  color: #fda4af !important;
+}
+
+[data-theme="dark"] .site-footer,
+body.dark-mode .site-footer {
+  background-color: #0b132b !important;
+  border-top-color: #1d4ed8 !important;
+}
+
+[data-theme="dark"] .theme-toggle-btn,
+body.dark-mode .theme-toggle-btn {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+/* System Preference Auto Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]),
+  body:not([data-theme="light"]) {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+  }
+
+  body:not([data-theme="light"]) .site-header {
+    background-color: #1e293b !important;
+    border-bottom-color: rgba(51, 65, 85, 0.8) !important;
+  }
+
+  body:not([data-theme="light"]) .brand-name,
+  body:not([data-theme="light"]) .hero-title,
+  body:not([data-theme="light"]) .section-banner-title,
+  body:not([data-theme="light"]) .card-title,
+  body:not([data-theme="light"]) .location-title,
+  body:not([data-theme="light"]) .insurance-name,
+  body:not([data-theme="light"]) .form-label {
+    color: #e2e8f0 !important;
+  }
+
+  body:not([data-theme="light"]) .section-banner {
+    background-color: #1e293b !important;
+    border-color: #2563eb !important;
+  }
+
+  body:not([data-theme="light"]) .hero-card {
+    background-color: #0c3854 !important;
+    border: 3.5px solid #38bdf8 !important;
+  }
+
+  body:not([data-theme="light"]) .hero-description,
+  body:not([data-theme="light"]) .card-description,
+  body:not([data-theme="light"]) .coming-soon,
+  body:not([data-theme="light"]) .footer-tagline,
+  body:not([data-theme="light"]) .copyright-text,
+  body:not([data-theme="light"]) .help-text,
+  body:not([data-theme="light"]) .hipaa-text {
+    color: #94a3b8 !important;
+  }
+
+  body:not([data-theme="light"]) .hero-image-frame,
+  body:not([data-theme="light"]) .card-img-holder,
+  body:not([data-theme="light"]) .insurance-icon-box {
+    background-color: #0f172a !important;
+    border-color: #334155 !important;
+  }
+
+  body:not([data-theme="light"]) .card-yellow {
+    background-color: #362104 !important;
+    border-color: #f59e0b !important;
+  }
+
+  body:not([data-theme="light"]) .card-pink {
+    background-color: #3e101d !important;
+    border-color: #f43f5e !important;
+  }
+
+  body:not([data-theme="light"]) .card-cyan {
+    background-color: #0c3854 !important;
+    border-color: #38bdf8 !important;
+  }
+
+  body:not([data-theme="light"]) .form-card-wrapper {
+    background-color: #0c3854 !important;
+    border-color: #38bdf8 !important;
+  }
+
+  body:not([data-theme="light"]) .form-input,
+  body:not([data-theme="light"]) .form-select,
+  body:not([data-theme="light"]) .form-textarea {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+  }
+
+  body:not([data-theme="light"]) .btn-cyan,
+  body:not([data-theme="light"]) .submit-btn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+  }
+
+  body:not([data-theme="light"]) .emergency-banner {
+    background-color: #2a121a !important;
+    border-color: #be123c !important;
+  }
+
+  body:not([data-theme="light"]) .emergency-text {
+    color: #fda4af !important;
+  }
+
+  body:not([data-theme="light"]) .site-footer {
+    background-color: #0b132b !important;
+  }
+}

@@ -1,0 +1,113 @@
+/* ==========================================================================
+   EMERGENCY BANNER & FOOTER
+   ========================================================================== */
+
+/* Emergency Alert Section */
+.emergency-section {
+  margin-bottom: 32px;
+}
+
+.emergency-banner {
+  background-color: var(--emergency-bg);
+  border: 3px solid var(--emergency-border);
+  border-radius: var(--radius-banner);
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.emergency-text {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #9f1239;
+}
+
+/* Site Footer */
+.site-footer {
+  background-color: var(--footer-bg);
+  border-top: 4px solid var(--primary-blue);
+  padding: 36px 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.footer-tagline {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-text {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 24px 16px;
+  }
+
+  .hero-card {
+    flex-direction: column;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insurances-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-card-wrapper {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insurances-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

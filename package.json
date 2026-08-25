@@ -1,0 +1,20 @@
+{
+  "name": "bss-therapy-center",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BSS Therapy Center - Better Support and Service Website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint js/"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "vite": "^5.2.0"
+  }
+}

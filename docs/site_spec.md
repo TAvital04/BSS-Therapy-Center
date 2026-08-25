@@ -2,7 +2,7 @@
 
 **Project:** BSS Therapy Center Website  
 **Hosting Target:** GitHub Pages (`/` root or `/docs`)  
-**Last Updated:** August 25, 2026  
+**Last Updated:** August 25, 2026
 
 ---
 
