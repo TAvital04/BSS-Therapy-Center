@@ -68,10 +68,20 @@ That's it! No passwords, OAuth linking, or server backends required.
 
 ## 🛠️ Local Development
 
-Run a local HTTP server from the repository root:
+Start the local Vite development server:
 
 ```bash
-python -m http.server 8080
+npm run dev
 ```
 
-Open `http://localhost:8080` in your web browser.
+Alternatively, run a static HTTP server from the repository root:
+
+```bash
+# Windows
+py -m http.server 8080
+
+# macOS / Linux
+python3 -m http.server 8080
+```
+
+Open `http://localhost:5173` (Vite) or `http://localhost:8080` in your web browser.

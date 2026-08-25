@@ -4,12 +4,12 @@
    Imports modular design system partials:
    - variables: Design tokens, colors, typography, spacing, shadows
    - reset:     Base resets, focus outlines, accessibility skip links
-   - header:    Site header bar, logo, theme toggle button
+   - header:    Site header bar and logo
    - hero:      Hero card, title, image frame
    - cards:     Section banners, services, locations, insurance cards
    - forms:     Inputs, submit button, loading spinner, error states, HIPAA notice
    - footer:    Emergency banner, footer navigation, copyright
-   - utilities: Helper utility classes and dark mode theme overrides
+   - utilities: Helper utility classes
    ========================================================================== */
 
 @import "./css/variables.css";
