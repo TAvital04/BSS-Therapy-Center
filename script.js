@@ -9,6 +9,25 @@
 const WEB3FORMS_ACCESS_KEY = "f2404bb2-5fb2-4a19-ab72-e6f977eecc50";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Dark Mode Theme Toggle Logic
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  const savedTheme = localStorage.getItem("bss_theme");
+
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const isDark = currentTheme === "dark" || (!currentTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      const nextTheme = isDark ? "light" : "dark";
+
+      document.documentElement.setAttribute("data-theme", nextTheme);
+      localStorage.setItem("bss_theme", nextTheme);
+    });
+  }
+
   const form = document.getElementById("appointment-form") || document.getElementById("careers-form");
   const submitBtn = document.getElementById("submit-btn");
   const btnText = document.getElementById("btn-text");

@@ -16,20 +16,24 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header" id="header">
     <div class="header-container">
-      <a href="#header" class="brand-logo" id="brand-logo-link">
+      <a href="index.html" class="brand-logo" id="brand-logo-link">
         <img src="assets/images/logo/bss_therapy_center_logo.png" alt="BSS Therapy Center Heart Logo" class="logo-img" id="logo-img">
         <span class="brand-name" id="brand-name">BSS Therapy Center</span>
       </a>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Light / Dark Mode">
+          <svg class="theme-toggle-icon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4C12.92 3.04 12.46 3 12 3z"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -129,41 +133,21 @@
       <div class="cards-grid locations-grid" id="locations-grid">
         <!-- Location 1 -->
         <article class="location-card card-pink" id="card-loc-miami">
-          <div class="location-icon-wrapper">
-            <svg class="location-pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#0C2B30"/>
-            </svg>
-          </div>
           <h3 class="location-title">Miami-Dade</h3>
         </article>
 
         <!-- Location 2 -->
         <article class="location-card card-yellow" id="card-loc-broward">
-          <div class="location-icon-wrapper">
-            <svg class="location-pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#0C2B30"/>
-            </svg>
-          </div>
           <h3 class="location-title">Broward</h3>
         </article>
 
         <!-- Location 3 -->
         <article class="location-card card-cyan" id="card-loc-palmbeach">
-          <div class="location-icon-wrapper">
-            <svg class="location-pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#0C2B30"/>
-            </svg>
-          </div>
           <h3 class="location-title">Palm Beach</h3>
         </article>
 
         <!-- Location 4 -->
         <article class="location-card card-pink" id="card-loc-orlando">
-          <div class="location-icon-wrapper">
-            <svg class="location-pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#0C2B30"/>
-            </svg>
-          </div>
           <h3 class="location-title">Orlando<br><span class="coming-soon">(Coming Soon)</span></h3>
         </article>
       </div>
