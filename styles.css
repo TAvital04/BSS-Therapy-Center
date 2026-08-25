@@ -55,6 +55,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   font-size: 16px;
 }
 
@@ -215,15 +216,6 @@ body {
 .hero-img {
   width: 100%;
   height: 100%;
-  /* 
-   * HOW TO CONTROL IMAGE CROPPING:
-   * 1. Change object-position to shift the focus area:
-   *    - 'center top' or '50% 20%' (shifts focus UP to show tops/heads)
-   *    - 'center bottom' (shifts focus DOWN)
-   *    - 'left center' or 'right center' (shifts focus horizontally)
-   * 2. Or change object-fit to 'contain' to show the 100% uncropped full photo:
-   *    - 'object-fit: contain;'
-   */
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -232,6 +224,7 @@ body {
 /* SECTION BANNERS */
 .section-container {
   margin-bottom: 40px;
+  scroll-margin-top: 90px;
 }
 
 .section-banner {
