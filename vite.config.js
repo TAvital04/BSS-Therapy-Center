@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        careers: resolve(__dirname, "careers.html")
+        careers: resolve(__dirname, "careers/index.html"),
+        careersLegacy: resolve(__dirname, "careers.html")
       }
     }
   }
