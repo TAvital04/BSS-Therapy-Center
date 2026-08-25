@@ -7,7 +7,7 @@ Production-ready, modern static website built for **BSS Therapy Center** (Better
 ## 📁 Clean Repository Structure
 
 ```text
-Orly/
+bss-therapy-center/
 ├── index.html                 # Core HTML5 semantic page structure
 ├── styles.css                 # Custom CSS stylesheet with design tokens
 ├── script.js                  # Client-side form validation & Web3Forms integration

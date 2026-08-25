@@ -9,7 +9,7 @@
 ## 📁 Repository Structure
 
 ```text
-Orly/
+bss-therapy-center/
 ├── index.html                 # Core homepage HTML5 markup with appointment form
 ├── careers.html               # Dedicated Careers & Employment application page (PDF resume upload)
 ├── styles.css                 # Modular CSS stylesheet (Design Tokens, Cards, Forms, File Uploads)
