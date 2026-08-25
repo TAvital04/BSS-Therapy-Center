@@ -9,7 +9,7 @@
   "header": {
     "logo": {
       "text": "BSS Therapy Center",
-      "image": "assets/images/logo/bss_therapy_center_logo.jpg",
+      "image": "assets/images/logo/bss_therapy_center_logo.png",
       "alt": "BSS Therapy Center Heart Logo"
     }
   },
@@ -114,43 +114,50 @@
         "id": "cms",
         "name": "Children's Medical Services",
         "icon": "assets/images/insurances/childrens_medical_services.jpg",
-        "theme_color": "cyan"
+        "theme_color": "cyan",
+        "resolution": "495x495 px"
       },
       {
         "id": "molina",
         "name": "Molina",
         "icon": "assets/images/insurances/molina.jpg",
-        "theme_color": "pink"
+        "theme_color": "pink",
+        "resolution": "360x360 px"
       },
       {
         "id": "cigna",
         "name": "Cigna",
         "icon": "assets/images/insurances/cigna.jpg",
-        "theme_color": "yellow"
+        "theme_color": "yellow",
+        "resolution": "272x257 px"
       },
       {
         "id": "aetna",
         "name": "Aetna",
         "icon": "assets/images/insurances/aetna.jpg",
-        "theme_color": "pink"
+        "theme_color": "pink",
+        "resolution": "268x268 px"
       },
       {
         "id": "carelon",
         "name": "Carelon",
         "icon": "assets/images/insurances/carelon.jpg",
-        "theme_color": "cyan"
+        "theme_color": "cyan",
+        "resolution": "200x200 px"
       },
       {
         "id": "humana",
         "name": "Humana",
         "icon": "assets/images/insurances/humana.jpg",
-        "theme_color": "yellow"
+        "theme_color": "yellow",
+        "resolution": "400x400 px"
       },
       {
         "id": "community-care-plan",
         "name": "Community Care Plan",
         "icon": "assets/images/insurances/community_care_plan.jpg",
-        "theme_color": "pink"
+        "theme_color": "pink",
+        "resolution": "225x225 px"
       }
     ]
   },

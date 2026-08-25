@@ -1,78 +1,138 @@
-# BSS Therapy Center - Website Asset & Content Library
+# BSS Therapy Center | Website & Deployment Guide
 
-This repository serves as a **complete skeleton and asset library** extracted directly from your website screenshots. All images have been cropped into JPEG format and organized into categorized directories, and all text content, field mappings, and design tokens are extracted into structured, easily editable formats.
+Production-ready, modern static website for **BSS Therapy Center** (Better Support and Service). Built with HTML5, Vanilla CSS, and JavaScript, fully configured for deployment on **GitHub Pages** with custom domain support and client-side email handling via **EmailJS (Outlook / Microsoft 365)**.
 
 ---
 
-## 📁 Directory Structure
+## 🌟 Overview & Architecture
+
+- **Frontend:** Semantic HTML5, CSS Grid & Flexbox, Vanilla JS (No build step required).
+- **Hosting Target:** GitHub Pages (deployable from root `/` or `/docs`).
+- **Domain Configuration:** Custom domain integration via `CNAME`.
+- **Contact Form:** Client-side email dispatching via EmailJS SDK routed through an Outlook / Microsoft 365 account.
+
+---
+
+## 🛠️ Step-by-Step Setup & Configuration Guide
+
+### 1. Linking an Outlook / Microsoft 365 Account in EmailJS
+
+1. **Sign Up / Log In to EmailJS:**
+   - Create a free account at [https://www.emailjs.com/](https://www.emailjs.com/).
+2. **Add Email Service (Outlook / Office 365):**
+   - In the EmailJS Dashboard, navigate to **Email Services** → **Add New Service**.
+   - Select **Outlook** or **Office 365** (Microsoft Exchange).
+   - Click **Connect Account** and log in with your BSS Therapy Center Outlook email credentials.
+   - Save the service and note your **`SERVICE_ID`** (e.g., `service_abc123`).
+3. **Create an Email Template:**
+   - Navigate to **Email Templates** → **Create New Template**.
+   - Set the email content to use the form variables:
+     - **To Email:** `your-recipient@bsstherapycenter.com`
+     - **Subject:** `{{subject}}`
+     - **Body:**
+       ```
+       New Appointment Request from BSS Therapy Center Website:
+
+       Name: {{first_name}} {{last_name}}
+       Email: {{email}}
+       Phone: {{phone}}
+       County: {{county}}
+       Selected Service: {{service_selection}}
+
+       Additional Details:
+       {{more_details}}
+       ```
+   - Save the template and note your **`TEMPLATE_ID`** (e.g., `template_xyz789`).
+4. **Get Your Public Key:**
+   - Navigate to **Account** → **API Keys** and copy your **`PUBLIC_KEY`** (e.g., `user_123456789`).
+5. **Update `script.js`:**
+   - Open [`script.js`](file:///c:/Users/talav/Documents/Github/Orly/script.js) and replace the placeholder values at the top:
+     ```javascript
+     const EMAILJS_CONFIG = {
+       PUBLIC_KEY: "your_actual_public_key",
+       SERVICE_ID: "your_actual_service_id",
+       TEMPLATE_ID: "your_actual_template_id"
+     };
+     ```
+
+---
+
+### 2. Enabling GitHub Pages Deployment
+
+1. **Push Code to GitHub Repository:**
+   ```bash
+   git add .
+   git commit -m "Deploy BSS Therapy Center website"
+   git push origin main
+   ```
+2. **Configure GitHub Pages in Repository Settings:**
+   - Go to your repository on GitHub.
+   - Click **Settings** → **Pages** (under Code and automation).
+   - Under **Build and deployment**:
+     - **Source:** Select `Deploy from a branch`.
+     - **Branch:** Select `main` and folder `/ (root)`.
+   - Click **Save**.
+
+---
+
+### 3. Custom Domain Setup & DNS Configuration
+
+1. **Update `CNAME` File:**
+   - Open [`CNAME`](file:///c:/Users/talav/Documents/Github/Orly/CNAME) and replace `example.com` with your registered domain (e.g., `bsstherapycenter.com`).
+2. **Configure DNS Records at Domain Registrar (GoDaddy, Namecheap, Cloudflare, etc.):**
+   Add the following DNS records at your domain registrar:
+
+   - **Apex / Root Domain A Records (Point to GitHub Pages IPs):**
+     | Type | Host / Name | Target IP Address |
+     | :--- | :--- | :--- |
+     | `A` | `@` | `185.199.108.153` |
+     | `A` | `@` | `185.199.109.153` |
+     | `A` | `@` | `185.199.110.153` |
+     | `A` | `@` | `185.199.111.153` |
+
+   - **Subdomain CNAME Record:**
+     | Type | Host / Name | Target Value |
+     | :--- | :--- | :--- |
+     | `CNAME` | `www` | `<your-github-username>.github.io` |
+
+3. **Enforce HTTPS in GitHub Settings:**
+   - In GitHub Repository **Settings** → **Pages**, check **Enforce HTTPS** (TLS certificate will issue automatically within minutes).
+
+---
+
+## 🧪 Local Testing & Verification
+
+To run and preview the website locally without an external web server build step:
+
+```bash
+# Using Python's built-in HTTP server
+py -m http.server 8080
+```
+
+Open `http://localhost:8080` in your web browser to test responsiveness, card hover states, form input validations, and simulated EmailJS submissions.
+
+---
+
+## 📂 Asset Library Reference
+
+The extracted image assets and content data are organized in the workspace as follows:
 
 ```
 Orly/
-├── ASSET_MANIFEST.json             # Master index of all 20 JPEG image assets and content sources
-├── README.md                       # Asset library documentation & usage guide
+├── CNAME                           # Domain mapping file
+├── .nojekyll                       # Jekyll build bypass flag
+├── index.html                      # Main HTML page
+├── styles.css                      # Custom design system stylesheet
+├── script.js                       # Interactive logic & EmailJS dispatch
+├── ASSET_MANIFEST.json             # Master index of extracted JPEG image assets
 ├── assets/
-│   ├── content/
-│   │   ├── design_tokens.json      # Color codes, border radii, font specifications
-│   │   ├── images_manifest.json    # Detailed metadata for image assets
-│   │   └── site_content.json       # Complete machine-readable text & schema in JSON format
-│   └── images/
-│       ├── hero/                   # Hero section imagery (.jpg)
-│       ├── insurances/             # Accepted insurance logos (.jpg)
-│       ├── locations/              # Facility & clinic location photos (.jpg)
-│       ├── logo/                   # Header & brand logos (.jpg)
-│       ├── services/               # Therapy & service card photos (.jpg)
-│       └── social/                 # Social network brand icons (.jpg)
-├── content/
-│   ├── design_tokens.json          # Duplicate reference copy for design tokens
-│   ├── site_content.json           # Editable site content JSON
-│   └── site_content.md             # Human-readable Markdown copy of all text
-└── references/
-    ├── intro_prompt.txt            # Site build prompt reference specifications
-    └── website_look.txt            # Website layout skeleton & text breakdown
+│   ├── content/                    # Content JSON & design tokens
+│   └── images/                     # Extracted JPEG images by category
+│       ├── hero/
+│       ├── insurances/
+│       ├── locations/
+│       ├── logo/
+│       ├── services/
+│       └── social/
+└── content/                        # Human-readable copy in Markdown & JSON
 ```
-
----
-
-## 🖼️ Extracted JPEG Image Assets (20 Files)
-
-All image assets have been extracted as high-quality JPEGs into categorized folders:
-
-### 1. Header & Logo (`assets/images/logo/`)
-- [`bss_therapy_center_logo.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/logo/bss_therapy_center_logo.jpg) — Main header logo with heart icon.
-
-### 2. Hero Section (`assets/images/hero/`)
-- [`hero_community_booth.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/hero/hero_community_booth.jpg) — Community outreach photo at Autism Awareness event.
-
-### 3. Services (`assets/images/services/`)
-- [`applied_behavior_analysis.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/applied_behavior_analysis.jpg) — ABA therapy session photo.
-- [`home_health_aid.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/home_health_aid.jpg) — Home health aide reading with child.
-- [`physical_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/physical_therapy.jpg) — Physical therapy session photo.
-- [`speech_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/speech_therapy.jpg) — Speech therapy examination photo.
-- [`occupational_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/occupational_therapy.jpg) — Occupational therapy shape exercise photo.
-
-### 4. Locations (`assets/images/locations/`)
-- [`miami_dade.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/miami_dade.jpg) — Miami-Dade facility exterior photo.
-- [`broward.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/broward.jpg) — Broward clinic interior waiting room photo.
-- [`palm_beach.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/palm_beach.jpg) — Palm Beach courtyard building photo.
-- [`orlando.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/orlando.jpg) — Orlando facility exterior photo (Coming Soon).
-
-### 5. Insurances Accepted (`assets/images/insurances/`)
-- [`childrens_medical_services.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/childrens_medical_services.jpg) — CMS logo icon.
-- [`molina.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/molina.jpg) — Molina Healthcare logo icon.
-- [`cigna.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/cigna.jpg) — Cigna logo icon.
-- [`aetna.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/aetna.jpg) — Aetna logo icon.
-- [`carelon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/carelon.jpg) — Carelon logo icon.
-- [`humana.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/humana.jpg) — Humana logo icon.
-- [`community_care_plan.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/community_care_plan.jpg) — Community Care Plan logo icon.
-
-### 6. Social Icons (`assets/images/social/`)
-- [`facebook_icon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/social/facebook_icon.jpg) — Facebook brand icon.
-- [`instagram_icon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/social/instagram_icon.jpg) — Instagram brand icon.
-
----
-
-## 📝 Structured Text & Content Management
-
-- **Human-Readable Text:** Open [`content/site_content.md`](file:///c:/Users/talav/Documents/Github/Orly/content/site_content.md) or [`references/website_look.txt`](file:///c:/Users/talav/Documents/Github/Orly/references/website_look.txt) to view or modify text content.
-- **Machine-Readable JSON:** Load [`content/site_content.json`](file:///c:/Users/talav/Documents/Github/Orly/content/site_content.json) in JavaScript or template engine to dynamically populate the website.
-- **Design Tokens:** Design system tokens (colors, borders, fonts) are defined in [`content/design_tokens.json`](file:///c:/Users/talav/Documents/Github/Orly/content/design_tokens.json).

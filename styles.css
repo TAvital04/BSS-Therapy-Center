@@ -1,0 +1,693 @@
+/* ==========================================================================
+   BSS Therapy Center - Core Stylesheet (Fixed Image Display & Responsive Layout)
+   ========================================================================== */
+
+:root {
+  /* Color Tokens */
+  --primary-dark: #0C2B30;
+  --primary-cyan: #00BCD4;
+  --primary-cyan-hover: #00ACC1;
+  --header-bg: #CFD7FF;
+  --hero-bg: #FFD6D6;
+  --banner-bg: #C5CEFF;
+  --banner-border: #2B3DF2;
+  --banner-text: #0C2B30;
+  
+  /* Card Themes */
+  --card-yellow-border: #FFD54F;
+  --card-yellow-bg: #FFFDE7;
+  --card-pink-border: #FF8A80;
+  --card-pink-bg: #FFEBEE;
+  --card-cyan-border: #4DD0E1;
+  --card-cyan-bg: #E0F7FA;
+  
+  /* Form & Emergency */
+  --form-card-bg: #CBEFF6;
+  --form-card-border: #4DD0E1;
+  --emergency-bg: #FFA4A4;
+  --emergency-border: #FF4D4D;
+  --footer-bg: #CFD7FF;
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii */
+  --radius-card: 22px;
+  --radius-banner: 14px;
+  --radius-btn: 14px;
+  --radius-img: 16px;
+
+  /* Shadows & Transitions */
+  --shadow-sm: 0 4px 12px rgba(12, 43, 48, 0.06);
+  --shadow-md: 0 8px 24px rgba(12, 43, 48, 0.1);
+  --transition-fast: all 0.2s ease-in-out;
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--primary-dark);
+  background-color: #FFFFFF;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout Wrapper */
+.main-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--header-bg);
+  border-bottom: 2px solid rgba(43, 61, 242, 0.15);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+.logo-img {
+  width: 48px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.nav-btn, .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-cyan {
+  background-color: var(--primary-cyan);
+  color: var(--primary-dark);
+}
+
+.btn-cyan:hover, .btn-cyan:focus-visible {
+  background-color: var(--primary-cyan-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  outline: none;
+}
+
+/* HERO SECTION */
+.hero-section {
+  margin-top: 10px;
+  margin-bottom: 36px;
+}
+
+.hero-card {
+  background-color: var(--hero-bg);
+  border: 3.5px solid #FF8A80;
+  border-radius: var(--radius-card);
+  padding: 32px 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--primary-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #1A353A;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.hero-actions .cta-btn {
+  padding: 10px 32px;
+  font-size: 1rem;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-image-frame {
+  border: 3.5px solid #FFD54F;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background-color: #FFFFFF;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* SECTION BANNERS */
+.section-container {
+  margin-bottom: 40px;
+}
+
+.section-banner {
+  background-color: var(--banner-bg);
+  border: 3.5px solid var(--banner-border);
+  border-radius: var(--radius-banner);
+  padding: 16px 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-banner-title {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--banner-text);
+  letter-spacing: -0.01em;
+}
+
+/* CARDS STYLING */
+.cards-grid {
+  display: grid;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.locations-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.insurances-grid {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+
+/* Card Themes */
+.card-yellow {
+  border: 3.5px solid var(--card-yellow-border);
+  background-color: var(--card-yellow-bg);
+}
+
+.card-pink {
+  border: 3.5px solid var(--card-pink-border);
+  background-color: var(--card-pink-bg);
+}
+
+.card-cyan {
+  border: 3.5px solid var(--card-cyan-border);
+  background-color: var(--card-cyan-bg);
+}
+
+/* Service Card */
+.service-card {
+  border-radius: var(--radius-card);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: var(--transition-fast);
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-img-holder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-img);
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #FFFFFF;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color: #37474F;
+  line-height: 1.4;
+  margin-top: auto;
+}
+
+/* Location Card */
+.location-card {
+  border-radius: var(--radius-card);
+  padding: 20px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-fast);
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.location-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.location-pin-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.location-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-top: auto;
+  line-height: 1.25;
+}
+
+.coming-soon {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #546E7A;
+}
+
+/* Insurance Card - Prominent Crisp Logo Box */
+.insurance-card {
+  border-radius: 18px;
+  padding: 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-fast);
+  height: 100%;
+}
+
+.insurance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.insurance-icon-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.insurance-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.insurance-name {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.15;
+  margin-top: auto;
+}
+
+/* APPOINTMENT FORM */
+.form-card-wrapper {
+  background-color: var(--form-card-bg);
+  border: 3.5px solid var(--form-card-border);
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+  background-color: #FFFFFF;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: var(--transition-fast);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--banner-border);
+  box-shadow: 0 0 0 3px rgba(43, 61, 242, 0.2);
+}
+
+.form-input.invalid, .form-select.invalid, .form-textarea.invalid {
+  border-color: #D32F2F;
+}
+
+.error-msg {
+  display: none;
+  font-size: 0.75rem;
+  color: #D32F2F;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.form-input.invalid ~ .error-msg,
+.form-select.invalid ~ .error-msg,
+.form-textarea.invalid ~ .error-msg {
+  display: block;
+}
+
+.form-submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  background-color: var(--primary-dark);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 36px;
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #14434B;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner-svg {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Alert Message Styling */
+.form-alert-container {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-alert-success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 2px solid #81C784;
+}
+
+.form-alert-error {
+  background-color: #FFEBEE;
+  color: #C62828;
+  border: 2px solid #EF5350;
+}
+
+/* EMERGENCY BANNER */
+.emergency-section {
+  margin-bottom: 32px;
+}
+
+.emergency-banner {
+  background-color: var(--emergency-bg);
+  border: 3.5px solid var(--emergency-border);
+  border-radius: var(--radius-banner);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.emergency-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: var(--footer-bg);
+  border-top: 2px solid rgba(43, 61, 242, 0.15);
+  padding: 28px 24px;
+}
+
+.footer-container {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid rgba(12, 43, 48, 0.12);
+}
+
+.copyright-text {
+  font-size: 0.8rem;
+  color: #37474F;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.social-icon-link:hover {
+  transform: scale(1.15);
+}
+
+.social-svg-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insurances-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insurances-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

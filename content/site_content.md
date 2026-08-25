@@ -6,7 +6,8 @@
 
 ## 1. Header Section
 - **Brand / Logo Text:** `BSS Therapy Center`
-- **Logo Asset:** `[bss_therapy_center_logo.jpg](file:///c:/Users/talav/Documents/Github/Orly/assets/images/logo/bss_therapy_center_logo.jpg)`
+- **Logo Asset:** [`bss_therapy_center_logo.png`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/logo/bss_therapy_center_logo.png) (897×646 px high-resolution PNG)
+- **Navigation:** Brand logo only
 
 ---
 
@@ -18,47 +19,47 @@
 - **Call-To-Action Buttons:**
   1. `Clients`
   2. `Careers`
-- **Hero Image:** `[hero_community_booth.jpg](file:///c:/Users/talav/Documents/Github/Orly/assets/images/hero/hero_community_booth.jpg)`
+- **Hero Image:** [`hero_community_booth.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/hero/hero_community_booth.jpg) (472×340 px)
 
 ---
 
 ## 3. Services Section
 - **Section Banner Title:** `Services`
 
-| Service Title | Description | Image Asset | Color Theme |
-| :--- | :--- | :--- | :--- |
-| **Applied Behavior Analysis (ABA)** | Evidence-based therapy focusing on improving specific behaviors and skills. | [`applied_behavior_analysis.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/applied_behavior_analysis.jpg) | Yellow |
-| **Home Health Aid** | Providing compassionate personal care and assistance in the comfort of home. | [`home_health_aid.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/home_health_aid.jpg) | Pink |
-| **Physical Therapy** | Helping children develop motor skills, strength, and coordination for daily activities. | [`physical_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/physical_therapy.jpg) | Cyan |
-| **Speech Therapy** | Empowering children to improve communication skills and language development. | [`speech_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/speech_therapy.jpg) | Cyan |
-| **Occupational Therapy** | Developing essential daily living skills through play-based, child-centered therapy. | [`occupational_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/occupational_therapy.jpg) | Yellow |
+| Service Title | Description | Image Asset | Resolution | Color Theme |
+| :--- | :--- | :--- | :--- | :--- |
+| **Applied Behavior Analysis (ABA)** | Evidence-based therapy focusing on improving specific behaviors and skills. | [`applied_behavior_analysis.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/applied_behavior_analysis.jpg) | 1024×1024 px | Yellow |
+| **Home Health Aid** | Providing compassionate personal care and assistance in the comfort of home. | [`home_health_aid.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/home_health_aid.jpg) | 1200×896 px | Pink |
+| **Physical Therapy** | Helping children develop motor skills, strength, and coordination for daily activities. | [`physical_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/physical_therapy.jpg) | 1024×1024 px | Cyan |
+| **Speech Therapy** | Empowering children to improve communication skills and language development. | [`speech_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/speech_therapy.jpg) | 1200×896 px | Cyan |
+| **Occupational Therapy** | Developing essential daily living skills through play-based, child-centered therapy. | [`occupational_therapy.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/services/occupational_therapy.jpg) | 1024×1024 px | Yellow |
 
 ---
 
 ## 4. Locations Section
 - **Section Banner Title:** `Locations`
 
-| Location Name | Status | Image Asset | Color Theme |
+| Location Name | Status | Icon Element | Color Theme |
 | :--- | :--- | :--- | :--- |
-| **Miami-Dade** | Active | [`miami_dade.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/miami_dade.jpg) | Pink |
-| **Broward** | Active | [`broward.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/broward.jpg) | Yellow |
-| **Palm Beach** | Active | [`palm_beach.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/palm_beach.jpg) | Cyan |
-| **Orlando** | Coming Soon (`(Coming Soon)`) | [`orlando.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/locations/orlando.jpg) | Pink |
+| **Miami-Dade** | Active | SVG Location Pin Icon | Pink |
+| **Broward** | Active | SVG Location Pin Icon | Yellow |
+| **Palm Beach** | Active | SVG Location Pin Icon | Cyan |
+| **Orlando** | Coming Soon (`(Coming Soon)`) | SVG Location Pin Icon | Pink |
 
 ---
 
 ## 5. Insurances Accepted Section
 - **Section Banner Title:** `Insurances Accepted`
 
-| Provider Name | Icon Asset | Color Theme |
-| :--- | :--- | :--- |
-| **Children's Medical Services** | [`childrens_medical_services.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/childrens_medical_services.jpg) | Cyan |
-| **Molina** | [`molina.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/molina.jpg) | Pink |
-| **Cigna** | [`cigna.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/cigna.jpg) | Yellow |
-| **Aetna** | [`aetna.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/aetna.jpg) | Pink |
-| **Carelon** | [`carelon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/carelon.jpg) | Cyan |
-| **Humana** | [`humana.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/humana.jpg) | Yellow |
-| **Community Care Plan** | [`community_care_plan.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/community_care_plan.jpg) | Pink |
+| Provider Name | Icon Asset | Resolution | Color Theme |
+| :--- | :--- | :--- | :--- |
+| **Children's Medical Services** | [`childrens_medical_services.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/childrens_medical_services.jpg) | 495×495 px | Cyan |
+| **Molina** | [`molina.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/molina.jpg) | 360×360 px | Pink |
+| **Cigna** | [`cigna.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/cigna.jpg) | 272×257 px | Yellow |
+| **Aetna** | [`aetna.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/aetna.jpg) | 268×268 px | Pink |
+| **Carelon** | [`carelon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/carelon.jpg) | 200×200 px | Cyan |
+| **Humana** | [`humana.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/humana.jpg) | 400×400 px | Yellow |
+| **Community Care Plan** | [`community_care_plan.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/insurances/community_care_plan.jpg) | 225×225 px | Pink |
 
 ---
 
@@ -91,12 +92,16 @@
    - Input Type: `Select Dropdown`
    - Required: `Yes`
    - Default Option: `Choose one`
-7. **More**
+7. **Subject**
+   - Label: `Subject *`
+   - Input Type: `Text`
+   - Required: `Yes`
+8. **More**
    - Label: `More`
    - Input Type: `Textarea`
    - Placeholder: `Please provide any additional details...`
    - Required: `No`
-8. **Submit Button**
+9. **Submit Button**
    - Button Text: `Send Message`
 
 ---
@@ -110,8 +115,5 @@
 ## 8. Footer Section
 - **Tagline:**  
   > Providing modern, compassionate care with an emphasis on accessibility and patient comfort.
-- **Social Media Icons:**
-  - Facebook: [`facebook_icon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/social/facebook_icon.jpg)
-  - Instagram: [`instagram_icon.jpg`](file:///c:/Users/talav/Documents/Github/Orly/assets/images/social/instagram_icon.jpg)
 - **Copyright Text:**  
   > © Better Support and Service. All rights reserved.
