@@ -10,11 +10,13 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint js/"
+    "lint": "eslint js/",
+    "convert-images": "node scripts/convert-webp.js"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",
+    "sharp": "^0.35.3",
     "vite": "^5.2.0"
   }
 }
