@@ -12,7 +12,7 @@
   --banner-bg: #C5CEFF;
   --banner-border: #2B3DF2;
   --banner-text: #0C2B30;
-  
+
   /* Card Themes */
   --card-yellow-border: #FFD54F;
   --card-yellow-bg: #FFFDE7;
@@ -20,7 +20,7 @@
   --card-pink-bg: #FFEBEE;
   --card-cyan-border: #4DD0E1;
   --card-cyan-bg: #E0F7FA;
-  
+
   /* Form & Emergency */
   --form-card-bg: #CBEFF6;
   --form-card-border: #4DD0E1;
@@ -45,7 +45,9 @@
 }
 
 /* Reset & Base Setup */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -117,7 +119,8 @@ body {
 }
 
 /* Buttons */
-.nav-btn, .cta-btn {
+.nav-btn,
+.cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +140,8 @@ body {
   color: var(--primary-dark);
 }
 
-.btn-cyan:hover, .btn-cyan:focus-visible {
+.btn-cyan:hover,
+.btn-cyan:focus-visible {
   background-color: var(--primary-cyan-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
@@ -202,7 +206,7 @@ body {
   box-shadow: var(--shadow-sm);
   background-color: #FFFFFF;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,8 +215,17 @@ body {
 .hero-img {
   width: 100%;
   height: 100%;
+  /* 
+   * HOW TO CONTROL IMAGE CROPPING:
+   * 1. Change object-position to shift the focus area:
+   *    - 'center top' or '50% 20%' (shifts focus UP to show tops/heads)
+   *    - 'center bottom' (shifts focus DOWN)
+   *    - 'left center' or 'right center' (shifts focus horizontally)
+   * 2. Or change object-fit to 'contain' to show the 100% uncropped full photo:
+   *    - 'object-fit: contain;'
+   */
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
 }
 
@@ -292,7 +305,7 @@ body {
 
 .card-img-holder {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-img);
   overflow: hidden;
   margin-bottom: 12px;
@@ -458,7 +471,9 @@ body {
   margin-bottom: 6px;
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
   width: 100%;
   padding: 10px 14px;
   font-family: var(--font-body);
@@ -470,13 +485,17 @@ body {
   transition: var(--transition-fast);
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
   outline: none;
   border-color: var(--banner-border);
   box-shadow: 0 0 0 3px rgba(43, 61, 242, 0.2);
 }
 
-.form-input.invalid, .form-select.invalid, .form-textarea.invalid {
+.form-input.invalid,
+.form-select.invalid,
+.form-textarea.invalid {
   border: 2.5px solid #D32F2F !important;
   background-color: #FFEBEE !important;
   box-shadow: 0 0 0 3.5px rgba(211, 47, 47, 0.25) !important;
@@ -490,9 +509,9 @@ body {
   font-weight: 700;
 }
 
-.form-input.invalid ~ .error-msg,
-.form-select.invalid ~ .error-msg,
-.form-textarea.invalid ~ .error-msg {
+.form-input.invalid~.error-msg,
+.form-select.invalid~.error-msg,
+.form-textarea.invalid~.error-msg {
   display: block !important;
 }
 
@@ -538,8 +557,13 @@ body {
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Alert Message Styling */

@@ -19,7 +19,7 @@ Orly/
 ├── assets/
 │   └── images/
 │       ├── logo/              # Brand logo PNG mark (897x646 px)
-│       ├── hero/              # Hero community booth photo (472x340 px)
+│       ├── hero/              # Hero community booth photo (964x777 px)
 │       ├── services/          # 5 service photo cards (ABA, HHA, PT, ST, OT)
 │       └── insurances/        # 7 official insurance provider logos
 └── docs/
@@ -44,7 +44,7 @@ Orly/
 
 ### 1. Logo & Hero
 - **Logo:** `assets/images/logo/bss_therapy_center_logo.png` (897×646 px PNG)
-- **Hero Photo:** `assets/images/hero/hero_community_booth.jpg` (472×340 px JPEG)
+- **Hero Photo:** `assets/images/hero/hero_community_booth.jpg` (964×777 px JPEG)
 
 ### 2. Services Section (5 Photos)
 - **ABA Therapy:** `assets/images/services/applied_behavior_analysis.jpg` (1024×1024 px)
