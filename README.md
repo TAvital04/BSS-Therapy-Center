@@ -1,13 +1,13 @@
-# BSS Therapy Center Website
+# BSS Therapy Service Website
 
-Production-ready, modern static website built for **BSS Therapy Center** (Better Support and Service) and configured for deployment on **GitHub Pages** with custom domain support and Web3Forms contact form integration.
+Production-ready, modern static website built for **BSS Therapy Service** (Better Support and Service) and configured for deployment on **GitHub Pages** with custom domain support and Web3Forms contact form integration.
 
 ---
 
 ## 📁 Clean Repository Structure
 
 ```text
-bss-therapy-center/
+bss-therapy-service/
 ├── index.html                 # Core HTML5 semantic page structure
 ├── styles.css                 # Custom CSS stylesheet with design tokens
 ├── script.js                  # Client-side form validation & Web3Forms integration
@@ -16,7 +16,7 @@ bss-therapy-center/
 ├── README.md                  # Setup & deployment documentation
 ├── assets/
 │   └── images/
-│       ├── logo/              # BSS Therapy Center brand logo
+│       ├── logo/              # BSS Therapy Service brand logo
 │       ├── hero/              # Hero outreach booth feature image
 │       ├── services/          # Pediatric therapy service cards
 │       └── insurances/        # Accepted insurance provider logo icons

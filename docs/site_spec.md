@@ -1,6 +1,6 @@
-# BSS Therapy Center - Site Specification & Documentation
+# BSS Therapy Service - Site Specification & Documentation
 
-**Project:** BSS Therapy Center Website  
+**Project:** BSS Therapy Service Website  
 **Hosting Target:** GitHub Pages (`/` root or `/docs`)  
 **Last Updated:** August 25, 2026
 
@@ -9,7 +9,7 @@
 ## 📁 Repository Structure
 
 ```text
-bss-therapy-center/
+bss-therapy-service/
 ├── index.html                 # Core homepage HTML5 markup with appointment form
 ├── careers.html               # Dedicated Careers & Employment application page (PDF resume upload)
 ├── styles.css                 # Modular CSS stylesheet (Design Tokens, Cards, Forms, File Uploads)

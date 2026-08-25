@@ -1,5 +1,5 @@
 /**
- * Global Configuration for BSS Therapy Center Applications
+ * Global Configuration for BSS Therapy Service Applications
  */
 export const CONFIG = {
   WEB3FORMS_ACCESS_KEY: "f2404bb2-5fb2-4a19-ab72-e6f977eecc50",

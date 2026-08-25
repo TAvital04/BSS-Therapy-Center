@@ -1,5 +1,5 @@
 /**
- * BSS Therapy Center - Client-Side Interactive Entry Point
+ * BSS Therapy Service - Client-Side Interactive Entry Point
  * =========================================================
  * Loads modular theme, validation, and form handler logic.
  */
