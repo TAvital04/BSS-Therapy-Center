@@ -1,0 +1,29 @@
+{
+  "colors": {
+    "primary_dark": "#0B2B30",
+    "primary_accent_blue": "#00BCD4",
+    "banner_purple": "#C4CFFF",
+    "banner_border": "#2B3DF2",
+    "card_border_yellow": "#FFD54F",
+    "card_bg_yellow": "#FFF9C4",
+    "card_border_pink": "#FF8A80",
+    "card_bg_pink": "#FFEBEE",
+    "card_border_cyan": "#4DD0E1",
+    "card_bg_cyan": "#E0F7FA",
+    "emergency_bg": "#FFCDD2",
+    "emergency_border": "#E57373",
+    "text_main": "#1A252C",
+    "text_subdued": "#546E7A"
+  },
+  "typography": {
+    "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "heading_weights": 700,
+    "body_weights": 400
+  },
+  "border_radius": {
+    "cards": "24px",
+    "banners": "12px",
+    "buttons": "16px",
+    "images": "16px"
+  }
+}

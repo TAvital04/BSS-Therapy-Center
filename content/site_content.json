@@ -1,0 +1,243 @@
+{
+  "site_metadata": {
+    "title": "BSS Therapy Center - Better Support and Service",
+    "description": "Miami's Most Experienced health care and home health therapy offering ABA, occupational, physical, speech therapies, PCS, Respite, and more.",
+    "language": "en",
+    "brand_name": "BSS Therapy Center",
+    "legal_name": "Better Support and Service"
+  },
+  "header": {
+    "logo": {
+      "text": "BSS Therapy Center",
+      "image": "assets/images/logo/bss_therapy_center_logo.jpg",
+      "alt": "BSS Therapy Center Heart Logo"
+    }
+  },
+  "hero": {
+    "headline": "Better Support and Service",
+    "body_text": "Miami's Most Experienced health care and home health therapy. We offer primary care, laboratory services, imaging, ABA, occupational, physical, and speech therapies, PCS, Respite and more.",
+    "call_to_action_buttons": [
+      {
+        "label": "Clients",
+        "action": "#clients",
+        "type": "primary"
+      },
+      {
+        "label": "Careers",
+        "action": "#careers",
+        "type": "secondary"
+      }
+    ],
+    "hero_image": {
+      "filepath": "assets/images/hero/hero_community_booth.jpg",
+      "alt": "BSS Therapy Center team at Autism Awareness event booth"
+    }
+  },
+  "services": {
+    "section_title": "Services",
+    "items": [
+      {
+        "id": "aba",
+        "title": "Applied Behavior Analysis (ABA)",
+        "description": "Evidence-based therapy focusing on improving specific behaviors and skills.",
+        "image": "assets/images/services/applied_behavior_analysis.jpg",
+        "theme_color": "yellow"
+      },
+      {
+        "id": "hha",
+        "title": "Home Health Aid",
+        "description": "Providing compassionate personal care and assistance in the comfort of home.",
+        "image": "assets/images/services/home_health_aid.jpg",
+        "theme_color": "pink"
+      },
+      {
+        "id": "pt",
+        "title": "Physical Therapy",
+        "description": "Helping children develop motor skills, strength, and coordination for daily activities.",
+        "image": "assets/images/services/physical_therapy.jpg",
+        "theme_color": "cyan"
+      },
+      {
+        "id": "st",
+        "title": "Speech Therapy",
+        "description": "Empowering children to improve communication skills and language development.",
+        "image": "assets/images/services/speech_therapy.jpg",
+        "theme_color": "cyan"
+      },
+      {
+        "id": "ot",
+        "title": "Occupational Therapy",
+        "description": "Developing essential daily living skills through play-based, child-centered therapy.",
+        "image": "assets/images/services/occupational_therapy.jpg",
+        "theme_color": "yellow"
+      }
+    ]
+  },
+  "locations": {
+    "section_title": "Locations",
+    "items": [
+      {
+        "id": "miami-dade",
+        "name": "Miami-Dade",
+        "status": "Active",
+        "image": "assets/images/locations/miami_dade.jpg",
+        "theme_color": "pink"
+      },
+      {
+        "id": "broward",
+        "name": "Broward",
+        "status": "Active",
+        "image": "assets/images/locations/broward.jpg",
+        "theme_color": "yellow"
+      },
+      {
+        "id": "palm-beach",
+        "name": "Palm Beach",
+        "status": "Active",
+        "image": "assets/images/locations/palm_beach.jpg",
+        "theme_color": "cyan"
+      },
+      {
+        "id": "orlando",
+        "name": "Orlando",
+        "status": "Coming Soon",
+        "badge": "(Coming Soon)",
+        "image": "assets/images/locations/orlando.jpg",
+        "theme_color": "pink"
+      }
+    ]
+  },
+  "insurances": {
+    "section_title": "Insurances Accepted",
+    "providers": [
+      {
+        "id": "cms",
+        "name": "Children's Medical Services",
+        "icon": "assets/images/insurances/childrens_medical_services.jpg",
+        "theme_color": "cyan"
+      },
+      {
+        "id": "molina",
+        "name": "Molina",
+        "icon": "assets/images/insurances/molina.jpg",
+        "theme_color": "pink"
+      },
+      {
+        "id": "cigna",
+        "name": "Cigna",
+        "icon": "assets/images/insurances/cigna.jpg",
+        "theme_color": "yellow"
+      },
+      {
+        "id": "aetna",
+        "name": "Aetna",
+        "icon": "assets/images/insurances/aetna.jpg",
+        "theme_color": "pink"
+      },
+      {
+        "id": "carelon",
+        "name": "Carelon",
+        "icon": "assets/images/insurances/carelon.jpg",
+        "theme_color": "cyan"
+      },
+      {
+        "id": "humana",
+        "name": "Humana",
+        "icon": "assets/images/insurances/humana.jpg",
+        "theme_color": "yellow"
+      },
+      {
+        "id": "community-care-plan",
+        "name": "Community Care Plan",
+        "icon": "assets/images/insurances/community_care_plan.jpg",
+        "theme_color": "pink"
+      }
+    ]
+  },
+  "appointment_form": {
+    "section_title": "Request Appointment",
+    "fields": [
+      {
+        "id": "first_name",
+        "label": "First Name *",
+        "type": "text",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "id": "last_name",
+        "label": "Last Name *",
+        "type": "text",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "id": "email",
+        "label": "Email Address *",
+        "type": "email",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "id": "phone",
+        "label": "Phone Number *",
+        "type": "tel",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "id": "county",
+        "label": "County *",
+        "type": "text",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "id": "service_selection",
+        "label": "Service Selection *",
+        "type": "select",
+        "required": true,
+        "default_option": "Choose one",
+        "options": [
+          "Applied Behavior Analysis (ABA)",
+          "Home Health Aid",
+          "Physical Therapy",
+          "Speech Therapy",
+          "Occupational Therapy",
+          "Primary Care / Other"
+        ]
+      },
+      {
+        "id": "more_details",
+        "label": "More",
+        "type": "textarea",
+        "required": false,
+        "placeholder": "Please provide any additional details..."
+      }
+    ],
+    "submit_button": {
+      "label": "Send Message"
+    }
+  },
+  "emergency_notice": {
+    "text": "In case of emergency, please dial 911 or visit the nearest ER.",
+    "type": "alert",
+    "severity": "critical"
+  },
+  "footer": {
+    "tagline": "Providing modern, compassionate care with an emphasis on accessibility and patient comfort.",
+    "copyright": "\u00a9 Better Support and Service. All rights reserved.",
+    "social_links": [
+      {
+        "platform": "Facebook",
+        "url": "#",
+        "icon": "assets/images/social/facebook_icon.jpg"
+      },
+      {
+        "platform": "Instagram",
+        "url": "#",
+        "icon": "assets/images/social/instagram_icon.jpg"
+      }
+    ]
+  }
+}
