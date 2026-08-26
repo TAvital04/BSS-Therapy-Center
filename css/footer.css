@@ -4,7 +4,7 @@
 
 /* Emergency Alert Section */
 .emergency-section {
-  margin-bottom: 32px;
+  margin-bottom: var(--space-section);
 }
 
 .emergency-banner {
@@ -60,7 +60,24 @@
 /* Responsive Overrides */
 @media (max-width: 768px) {
   .main-content {
-    padding: 24px 16px;
+    padding: 32px 16px 28px;
+  }
+
+  .hero-section,
+  .section-container,
+  .emergency-section {
+    margin-bottom: var(--space-section-mobile);
+  }
+
+  .section-banner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .cards-grid,
+  .form-card-wrapper {
+    margin-left: var(--content-inset-tablet);
+    margin-right: var(--content-inset-tablet);
   }
 
   .hero-card {
@@ -103,6 +120,12 @@
 }
 
 @media (max-width: 480px) {
+  .cards-grid,
+  .form-card-wrapper {
+    margin-left: var(--content-inset-mobile);
+    margin-right: var(--content-inset-mobile);
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }

@@ -42,6 +42,16 @@
   --space-lg: 1.5rem; /* 24px */
   --space-xl: 2.25rem; /* 36px */
   --space-2xl: 3rem; /* 48px */
+  --space-3xl: 3.75rem; /* 60px */
+  --space-4xl: 5rem; /* 80px */
+  --space-section: var(--space-4xl); /* 80px section spacing */
+  --space-section-mobile: 3.25rem; /* 52px section spacing on mobile */
+
+  /* Section Header Outset & Content Inset Tokens */
+  --header-outset: -10px;
+  --content-inset: 36px;
+  --content-inset-tablet: 20px;
+  --content-inset-mobile: 10px;
 
   /* Shadows & Radius */
   --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
