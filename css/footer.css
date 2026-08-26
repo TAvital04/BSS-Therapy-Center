@@ -60,13 +60,21 @@
 /* Responsive Overrides */
 @media (max-width: 768px) {
   .main-content {
-    padding: 32px 16px 28px;
+    padding: 48px 16px 40px;
   }
 
   .hero-section,
   .section-container,
   .emergency-section {
     margin-bottom: var(--space-section-mobile);
+  }
+
+  .section-container + .section-container::before,
+  .hero-section + .section-container::before,
+  .section-container + .emergency-section::before {
+    width: 100px;
+    height: 3px;
+    margin: 0 auto 32px auto;
   }
 
   .section-banner {
@@ -127,7 +135,8 @@
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .insurances-grid {

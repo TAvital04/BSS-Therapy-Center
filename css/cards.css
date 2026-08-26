@@ -4,7 +4,21 @@
 
 .section-container {
   margin-bottom: var(--space-section);
-  scroll-margin-top: 90px;
+  scroll-margin-top: 100px;
+  position: relative;
+}
+
+/* Decorative Visual Section Separators */
+.section-container + .section-container::before,
+.hero-section + .section-container::before,
+.section-container + .emergency-section::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.08), rgba(37, 99, 235, 0.35), rgba(37, 99, 235, 0.08));
+  border-radius: 4px;
+  margin: 0 auto 44px auto;
 }
 
 .section-banner {
@@ -213,4 +227,26 @@
   font-weight: 800;
   color: var(--primary-dark);
   line-height: 1.25;
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 12px 10px;
+    border-radius: 16px;
+  }
+
+  .service-card .card-img-holder {
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .service-card .card-title {
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+  }
+
+  .service-card .card-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
 }
